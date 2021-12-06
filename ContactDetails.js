@@ -1,4 +1,3 @@
-
 class ContactDetails
 {
     //property
@@ -172,6 +171,8 @@ class ContactDetails
         return "firstName = " +this.firstName + ", lastName = " +this.lastName + ", address = " +this.address + ", city = " +this.city + ", state = " +this.state + ", zip = " +this.zip + ", phoneNumber = " +this.phoneNumber + ", email = " +this.emailId;
     }
 
+    
+    
 }
 
 module.exports = ContactDetails;
