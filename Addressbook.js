@@ -1,5 +1,5 @@
 //importing class
-const ContactDetails = require("./ContactDetailes.js");
+const ContactDetails = require("./ContactDetails.js");
 const prompt = require('prompt-sync')();
 
 class AddressBook
@@ -129,6 +129,38 @@ class AddressBook
                     if (element.state == state) 
                     {
                         console.log(element);
+                    }
+                });
+                break;
+            default:
+                console.log("Invalid Input");
+                break;
+        }
+    }
+    //This function for count contacts by city or state name
+    CountContactByCityOrState(contactBook) 
+     {
+        console.log("1: Count by City");
+        console.log("2: Count by State");
+        let choice = parseInt(prompt("Enter your choice : "));
+        let count =0;
+        switch (choice) 
+        {
+            case 1:
+                let city = prompt("Enter the City you want to Count the person  : ");
+                contactBook.forEach(element => {
+                    if (element.city == city) 
+                    {
+                        count++;
+                    }
+                });
+                break;
+            case 2:
+                let state = prompt("Enter the State you want to Count the person : ");
+                contactBook.forEach(element => {
+                    if (element.state == state) 
+                    {
+                        count++;
                     }
                 });
                 break;
