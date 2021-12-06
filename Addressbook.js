@@ -1,5 +1,5 @@
 //importing class
-const ContactDetails = require("./ContactDetails.js");
+const ContactDetails = require("./ContactDetailes.js");
 const prompt = require('prompt-sync')();
 
 class AddressBook
@@ -136,6 +136,7 @@ class AddressBook
                 console.log("Invalid Input");
                 break;
         }
-    }        
+    }
+            
 }
 module.exports = AddressBook;
